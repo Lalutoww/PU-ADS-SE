@@ -2,7 +2,6 @@
 
 class Program
 {
-
     static void Main(string[] args)
     {
         /* 1. Да се състави програма, чрез която се въвеждат 9 реални числа от интервала [-99.99..99.99].
@@ -15,7 +14,7 @@ class Program
         /* 2. Да се състави програма, чрез която се въвежда естествено число N от интервала [10..100010].
            Програмата да извежда най-близкото по-голямо просто число.
            Пример: 98 Изход 101 */
-        
+
         Console.WriteLine("----------TASK 2----------");
         TaskTwo.Run();
 
@@ -130,14 +129,12 @@ internal static class TaskThree
 
     private static int GetSumOfDigits(int number)
     {
-        int sum = 0;
-
-        foreach (char digit in number.ToString())
+        if (number == 0)
         {
-            sum += digit - '0';
+            return 0;
         }
 
-        return sum;
+        return (number % 10) + GetSumOfDigits(number / 10);
     }
 }
 
