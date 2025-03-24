@@ -54,7 +54,7 @@ internal static class TaskOne
 
     private static double[] FillArray()
     {
-        double[] array = new double[10];
+        double[] array = new double[9];
         int index = 0;
 
         Console.WriteLine("Please keep in mind numbers must be in range [-99.99..99.99]");
